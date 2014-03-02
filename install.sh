@@ -2,7 +2,7 @@
 
 set -e
 
-if [ `getenforce`!="Enforcing" ]; then
+if [ $(getenforce) != "Enforcing" ]; then
   echo -e "SELINUX=enforcing\nSELINUXTYPE=targeted" > /etc/sysconfig/selinux
   echo "Selinux conf changed, rebooting machine in 5 sec ..."
   sleep 6
