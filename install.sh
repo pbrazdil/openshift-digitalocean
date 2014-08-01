@@ -11,6 +11,8 @@ else
   echo "Selinux is OK"
 fi
 
+yum remove firewalld
+
 yum -y install ruby unzip httpd-tools puppet bind augeas
 
 sh <(curl -s https://install.openshift.com/)
